@@ -1,11 +1,13 @@
 import React from 'react'
+import {useNavigate, Link} from "react-router";
 
 const Register = () => {
 
-const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle register logic here
-}
+    const navigate = useNavigate();
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Handle register logic here
+    }
 
   return (
     <main>
@@ -31,6 +33,8 @@ const handleSubmit = (e) => {
 
                     <button className='button primary-button' >Register</button>
                 </form>
+
+                <p>Already have an account? <Link to="/login">Login</Link></p>
             </div>
     
 
