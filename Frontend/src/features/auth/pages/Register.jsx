@@ -1,8 +1,13 @@
-import React from 'react'
-import { Link} from "react-router";
+import React, { useState } from 'react'
+import {useNavigate, Link} from "react-router";
 
 const Register = () => {
 
+    const navigate = useNavigate()
+    const [username, setUsername] = useState("")
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    
     
     const handleSubmit = (e) => {
         e.preventDefault();
